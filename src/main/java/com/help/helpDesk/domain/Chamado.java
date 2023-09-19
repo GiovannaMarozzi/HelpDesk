@@ -4,7 +4,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.help.helpDesk.enums.Prioridade;
 import com.help.helpDesk.enums.Status;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -12,6 +15,8 @@ import java.util.Objects;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Chamado implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

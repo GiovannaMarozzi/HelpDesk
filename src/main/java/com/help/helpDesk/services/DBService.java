@@ -23,7 +23,7 @@ public class DBService {
     @Autowired
     private ChamadoRepository chamadoRepository;
     public void instanciaDB(){
-        Tecnico tec1 = new Tecnico(null, "Valdir Cesar", "123.456.789-11", "valdir@email.com", "123", null);
+        Tecnico tec1 = new Tecnico(null, "Valdir Cesar", "123.456.789-11", "valdir@email.com", "123");
         tec1.addPerfil(Perfil.AMDMIN);
 
         Cliente cli1 = new Cliente(null, "Linus Torvalts", "147582635-48", "torvalts@email.com", "teste", null);
