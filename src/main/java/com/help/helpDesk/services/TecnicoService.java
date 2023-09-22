@@ -1,6 +1,8 @@
 package com.help.helpDesk.services;
 
 import com.help.helpDesk.domain.Tecnico;
+import com.help.helpDesk.domain.dto.TecnicoDTO;
+import com.help.helpDesk.enums.Perfil;
 import com.help.helpDesk.repository.TecnicoRepository;
 import com.help.helpDesk.services.exceptions.ObjectNotFoundException;
 import org.aspectj.weaver.ast.Var;
@@ -23,5 +25,11 @@ public class TecnicoService {
 
     public List<Tecnico> findAll() {
         return repository.findAll();
+    }
+
+    public Tecnico create(TecnicoDTO tecnico) {
+        tecnico.setId(null);
+        Tecnico newObjs = new Tecnico(tecnico);
+        return repository.save(newObjs);
     }
 }
